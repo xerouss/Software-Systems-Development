@@ -1,0 +1,24 @@
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\bin\Debug\Game Café Demonstration Program.exe.config
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\bin\Debug\Game Café Demonstration Program.exe
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\bin\Debug\Game Café Demonstration Program.pdb
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game Café Demonstration Program.csprojResolveAssemblyReference.cache
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.Properties.Resources.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game Café Demonstration Program.csproj.GenerateResource.Cache
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game Café Demonstration Program.csproj.CoreCompileInputs.cache
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game Café Demonstration Program.exe
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game Café Demonstration Program.pdb
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.HardwareList.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.MainMenu.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.LoginPage.resources
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.exe.config
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.exe
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.pdb
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csprojResolveAssemblyReference.cache
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.HardwareList.resources
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.LoginPage.resources
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.MainMenu.resources
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.Properties.Resources.resources
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csproj.GenerateResource.Cache
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csproj.CoreCompileInputs.cache
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.exe
+G:\Users\Lonck\Documents\3\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.pdb
