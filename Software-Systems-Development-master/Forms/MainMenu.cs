@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class MainMenu : Form
+    public partial class HardwareRegistration : Form
     {
-        public MainMenu()
+        public HardwareRegistration()
         {
             InitializeComponent();
         }

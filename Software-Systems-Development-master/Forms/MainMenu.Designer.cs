@@ -1,6 +1,6 @@
 ﻿namespace Game_Café_Demonstration_Program
 {
-    partial class MainMenu
+    partial class HardwareRegistration
     {
         /// <summary>
         /// Required designer variable.

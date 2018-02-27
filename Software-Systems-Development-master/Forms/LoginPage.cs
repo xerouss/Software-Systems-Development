@@ -20,7 +20,7 @@ namespace Game_Café_Demonstration_Program
 
         private void LoginButton_Click_1(object sender, EventArgs e)
         {
-            MainMenu mainMenu = new MainMenu();
+            HardwareRegistration mainMenu = new HardwareRegistration();
             this.Hide();
             mainMenu.ShowDialog();
             this.Close();

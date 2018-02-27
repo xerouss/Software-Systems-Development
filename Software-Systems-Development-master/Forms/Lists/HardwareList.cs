@@ -25,10 +25,15 @@ namespace Game_Café_Demonstration_Program
         private void ReturnToMenuButton_Click(object sender, EventArgs e)
         {
             // Create a hardware form to show while closing this form
-            MainMenu mainMenu = new MainMenu();
+            HardwareRegistration mainMenu = new HardwareRegistration();
             this.Hide();
             mainMenu.ShowDialog();
             this.Close();
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
