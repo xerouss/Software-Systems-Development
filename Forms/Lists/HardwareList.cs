@@ -30,5 +30,14 @@ namespace Game_Café_Demonstration_Program
             mainMenu.ShowDialog();
             this.Close();
         }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            // Create the hardware registration form to show while closing this form
+            HardwareRegistration mainMenu = new HardwareRegistration();
+            this.Hide();
+            mainMenu.ShowDialog();
+            this.Close();
+        }
     }
 }

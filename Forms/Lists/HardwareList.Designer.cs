@@ -40,6 +40,7 @@
             this.DurationsData = new System.Windows.Forms.Label();
             this.PriceData = new System.Windows.Forms.Label();
             this.BookByNameData = new System.Windows.Forms.Label();
+            this.RegisterButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,14 +49,12 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.BookByName, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.Price, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.Duration, 3, 0);
@@ -67,6 +66,7 @@
             this.tableLayoutPanel1.Controls.Add(this.DurationsData, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.PriceData, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.BookByNameData, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.RegisterButton, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -84,9 +84,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BookByName.AutoSize = true;
             this.BookByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookByName.Location = new System.Drawing.Point(993, 90);
+            this.BookByName.Location = new System.Drawing.Point(997, 90);
             this.BookByName.Name = "BookByName";
-            this.BookByName.Size = new System.Drawing.Size(226, 13);
+            this.BookByName.Size = new System.Drawing.Size(222, 13);
             this.BookByName.TabIndex = 5;
             this.BookByName.Text = "Name";
             // 
@@ -96,9 +96,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Price.AutoSize = true;
             this.Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price.Location = new System.Drawing.Point(759, 90);
+            this.Price.Location = new System.Drawing.Point(767, 90);
             this.Price.Name = "Price";
-            this.Price.Size = new System.Drawing.Size(226, 13);
+            this.Price.Size = new System.Drawing.Size(222, 13);
             this.Price.TabIndex = 4;
             this.Price.Text = "Price (£)";
             // 
@@ -108,9 +108,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Duration.AutoSize = true;
             this.Duration.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Duration.Location = new System.Drawing.Point(525, 90);
+            this.Duration.Location = new System.Drawing.Point(537, 90);
             this.Duration.Name = "Duration";
-            this.Duration.Size = new System.Drawing.Size(226, 13);
+            this.Duration.Size = new System.Drawing.Size(222, 13);
             this.Duration.TabIndex = 3;
             this.Duration.Text = "Duration (hours)";
             // 
@@ -120,9 +120,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DateTime.AutoSize = true;
             this.DateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateTime.Location = new System.Drawing.Point(291, 90);
+            this.DateTime.Location = new System.Drawing.Point(307, 90);
             this.DateTime.Name = "DateTime";
-            this.DateTime.Size = new System.Drawing.Size(226, 13);
+            this.DateTime.Size = new System.Drawing.Size(222, 13);
             this.DateTime.TabIndex = 2;
             this.DateTime.Text = "Date and Time";
             // 
@@ -142,16 +142,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.HardwareNames.AutoSize = true;
             this.HardwareNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HardwareNames.Location = new System.Drawing.Point(57, 90);
+            this.HardwareNames.Location = new System.Drawing.Point(77, 90);
             this.HardwareNames.Name = "HardwareNames";
-            this.HardwareNames.Size = new System.Drawing.Size(226, 13);
+            this.HardwareNames.Size = new System.Drawing.Size(222, 13);
             this.HardwareNames.TabIndex = 1;
             this.HardwareNames.Text = "Name";
             // 
             // HardwareNamesData
             // 
             this.HardwareNamesData.AutoSize = true;
-            this.HardwareNamesData.Location = new System.Drawing.Point(57, 105);
+            this.HardwareNamesData.Location = new System.Drawing.Point(77, 105);
             this.HardwareNamesData.Name = "HardwareNamesData";
             this.HardwareNamesData.Size = new System.Drawing.Size(64, 39);
             this.HardwareNamesData.TabIndex = 6;
@@ -160,7 +160,7 @@
             // DateTimeData
             // 
             this.DateTimeData.AutoSize = true;
-            this.DateTimeData.Location = new System.Drawing.Point(291, 105);
+            this.DateTimeData.Location = new System.Drawing.Point(307, 105);
             this.DateTimeData.Name = "DateTimeData";
             this.DateTimeData.Size = new System.Drawing.Size(89, 39);
             this.DateTimeData.TabIndex = 7;
@@ -169,7 +169,7 @@
             // DurationsData
             // 
             this.DurationsData.AutoSize = true;
-            this.DurationsData.Location = new System.Drawing.Point(525, 105);
+            this.DurationsData.Location = new System.Drawing.Point(537, 105);
             this.DurationsData.Name = "DurationsData";
             this.DurationsData.Size = new System.Drawing.Size(13, 39);
             this.DurationsData.TabIndex = 8;
@@ -178,7 +178,7 @@
             // PriceData
             // 
             this.PriceData.AutoSize = true;
-            this.PriceData.Location = new System.Drawing.Point(759, 105);
+            this.PriceData.Location = new System.Drawing.Point(767, 105);
             this.PriceData.Name = "PriceData";
             this.PriceData.Size = new System.Drawing.Size(13, 39);
             this.PriceData.TabIndex = 9;
@@ -187,11 +187,21 @@
             // BookByNameData
             // 
             this.BookByNameData.AutoSize = true;
-            this.BookByNameData.Location = new System.Drawing.Point(993, 105);
+            this.BookByNameData.Location = new System.Drawing.Point(997, 105);
             this.BookByNameData.Name = "BookByNameData";
             this.BookByNameData.Size = new System.Drawing.Size(85, 39);
             this.BookByNameData.TabIndex = 10;
             this.BookByNameData.Text = "Peter Medyakov\r\nAlister Hartwell\r\nStephen Wong";
+            // 
+            // RegisterButton
+            // 
+            this.RegisterButton.Location = new System.Drawing.Point(5, 108);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(64, 23);
+            this.RegisterButton.TabIndex = 11;
+            this.RegisterButton.Text = "Register";
+            this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // HardwareList
             // 
@@ -221,5 +231,6 @@
         private System.Windows.Forms.Label DurationsData;
         private System.Windows.Forms.Label PriceData;
         private System.Windows.Forms.Label BookByNameData;
+        private System.Windows.Forms.Button RegisterButton;
     }
 }

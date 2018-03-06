@@ -16,5 +16,24 @@ namespace Game_Café_Demonstration_Program
         {
             InitializeComponent();
         }
+
+
+        private void LoginButton_Click_1(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            this.Hide();
+            mainMenu.ShowDialog();
+            this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
