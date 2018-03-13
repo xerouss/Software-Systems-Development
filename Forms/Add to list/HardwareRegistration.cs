@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using System.Data.SqlClient;
 
 namespace Game_Café_Demonstration_Program
 {
     public partial class HardwareRegistration : Form
     {
+
         public HardwareRegistration()
         {
             InitializeComponent();
@@ -31,37 +31,42 @@ namespace Game_Café_Demonstration_Program
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
+            // Resources used to implement
             // https://stackoverflow.com/questions/10263094/executenonquery-connection-property-has-not-been-initialized
             // http://www.c-sharpcorner.com/UploadFile/009464/insert-data-into-database-in-window-form-using-C-Sharp/
+            // https://stackoverflow.com/questions/42868370/stored-procedure-not-found
+            // NOTE THE VALUES ARE NOT KEPT WHEN CLOSING THE APPLICATION
+            // HOWEVER WILL WORK IF YOU RUN THE APPLICATION FROM BIN/DEBUG FOLDER
 
-            // NEED TO CREATE A PROCEDURE FROM THIS FOR IT TO WORK
-            // CANNOT DO IT AT UNI BECAUSE I THINK ITS BLOCKING ACCESS
-            // NEED TO CHANGE THE HARDWARE AND PERIPHERAL VALUES TO VARCHAR
-            // AND CHANGE HARDWARE FIELD TO HARDWARE TYPE
-            // USE ONE DATABASE AS WELL INSTEAD OF MULTIPLE FOR EVERYTHING AND JUST DO NEW TABLES
-            //https://stackoverflow.com/questions/42868370/stored-procedure-not-found
+            // Get the data to save into the database
+            string peripheral = "";
+            string hardware = "";
+            if(HardwareDropDown.SelectedItem != null) hardware = HardwareDropDown.SelectedItem.ToString();
+            if(PeripheralDropDown.SelectedItem != null) peripheral = PeripheralDropDown.SelectedItem.ToString();
 
-            string hardware = HardwareDropDown.SelectedItem.ToString();
-            string peripheral = PeripheralDropDown.SelectedItem.ToString();
+            if (hardware != "")
+            {
+                // Connect to the database
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Databases\GameCaféDatabase.mdf;Integrated Security=True;");
+                // Create the command which will be used to interact with the database
+                SqlCommand cmd = new SqlCommand("sp_insertIntoHardware", con);
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Databases\HardwareRegistrationDatabase.mdf;Integrated Security=True;");
+                // Set the data which will be added to the database
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("@HardwareID", SqlDbType.Int).Value = 0;
+                cmd.Parameters.AddWithValue("@HardwareType", SqlDbType.VarChar).Value = hardware;
+                cmd.Parameters.AddWithValue("@Peripheral", SqlDbType.VarChar).Value = peripheral;
 
-            // SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[Hardware] ([Id], [Hardware], [Peripheral])" +
-            //    "VALUES (@ID, @Hardware, @Peripheral);");
-            SqlCommand cmd = new SqlCommand("sp_insert", con);
+                // Open the connection to the database and execute the command
+                con.Open();
+                int i = cmd.ExecuteNonQuery();
 
-            //cmd.Connection = con;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ID", SqlDbType.Int).Value = 0;
-            cmd.Parameters.AddWithValue("@Hardware", SqlDbType.VarChar).Value = hardware;
-            cmd.Parameters.AddWithValue("@Peripheral", SqlDbType.VarChar).Value = peripheral;
+                // Close the database since we have finished using it
+                con.Close();
 
-            con.Open();
-            int i = cmd.ExecuteNonQuery();
-
-            con.Close();
-
-            ReturnBackToHardwareList();
+                // Return the user back to the hardware list
+                ReturnBackToHardwareList();
+            }
         }
 
         void ReturnBackToHardwareList()

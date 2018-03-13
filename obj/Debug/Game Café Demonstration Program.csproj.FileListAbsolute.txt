@@ -21,7 +21,7 @@ C:\Users\1wongs50\Downloads\Software-Systems-Development-master\Software-Systems
 C:\Users\1wongs50\Downloads\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csproj.CoreCompileInputs.cache
 C:\Users\1wongs50\Downloads\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.exe
 C:\Users\1wongs50\Downloads\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.pdb
-D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\bin\Debug\Databases\HardwareDatabase.mdf
-D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\bin\Debug\Databases\HardwareDatabase_log.ldf
 D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.HardwareRegistration.resources
 D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.MainMenu.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\bin\Debug\Databases\GameCaféDatabase.mdf
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\bin\Debug\Databases\GameCaféDatabase_log.ldf

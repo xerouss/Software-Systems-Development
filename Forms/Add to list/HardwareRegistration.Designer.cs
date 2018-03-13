@@ -64,14 +64,8 @@
             this.HardwareDropDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HardwareDropDown.FormattingEnabled = true;
             this.HardwareDropDown.Items.AddRange(new object[] {
-            "Xbox One X",
-            "Xbox One",
-            "Xbox 360",
-            "PlayStation 4",
-            "PlayStation 3",
-            "Nintendo Switch",
-            "Wii U",
-            "PC"});
+            "Microsoft Xbox One X",
+            "Sony Playstation PS4 Pro"});
             this.HardwareDropDown.Location = new System.Drawing.Point(201, 96);
             this.HardwareDropDown.Name = "HardwareDropDown";
             this.HardwareDropDown.Size = new System.Drawing.Size(112, 21);
@@ -102,7 +96,7 @@
             this.PeripheralDropDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PeripheralDropDown.FormattingEnabled = true;
             this.PeripheralDropDown.Items.AddRange(new object[] {
-            "Monitor",
+            "Acer R240 24-inch Monitor",
             "Controller"});
             this.PeripheralDropDown.Location = new System.Drawing.Point(201, 310);
             this.PeripheralDropDown.Name = "PeripheralDropDown";

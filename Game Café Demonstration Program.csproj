@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -84,10 +84,10 @@
     <Compile Include="Forms\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Databases\HardwareDatabaseDataSet.Designer.cs">
+    <Compile Include="Databases\GameCaféDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HardwareDatabaseDataSet.xsd</DependentUpon>
+      <DependentUpon>GameCaféDatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,16 +112,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Databases\HardwareDatabaseDataSet.xsc">
-      <DependentUpon>HardwareDatabaseDataSet.xsd</DependentUpon>
+    <None Include="Databases\GameCaféDatabaseDataSet.xsc">
+      <DependentUpon>GameCaféDatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Databases\HardwareDatabaseDataSet.xsd">
+    <None Include="Databases\GameCaféDatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HardwareDatabaseDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>GameCaféDatabaseDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Databases\HardwareDatabaseDataSet.xss">
-      <DependentUpon>HardwareDatabaseDataSet.xsd</DependentUpon>
+    <None Include="Databases\GameCaféDatabaseDataSet.xss">
+      <DependentUpon>GameCaféDatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -138,12 +138,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Databases\HardwareDatabase.mdf">
+    <Content Include="Databases\GameCaféDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Databases\HardwareDatabase_log.ldf">
+    <Content Include="Databases\GameCaféDatabase_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>HardwareDatabase.mdf</DependentUpon>
+      <DependentUpon>GameCaféDatabase.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

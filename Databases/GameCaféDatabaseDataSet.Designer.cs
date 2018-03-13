@@ -20,9 +20,9 @@ namespace Game_Café_Demonstration_Program.Databases {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("HardwareDatabaseDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("GameCaféDatabaseDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class HardwareDatabaseDataSet : global::System.Data.DataSet {
+    public partial class GameCaféDatabaseDataSet : global::System.Data.DataSet {
         
         private HardwareDataTable tableHardware;
         
@@ -30,7 +30,7 @@ namespace Game_Café_Demonstration_Program.Databases {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public HardwareDatabaseDataSet() {
+        public GameCaféDatabaseDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Game_Café_Demonstration_Program.Databases {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected HardwareDatabaseDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected GameCaféDatabaseDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Game_Café_Demonstration_Program.Databases {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            HardwareDatabaseDataSet cln = ((HardwareDatabaseDataSet)(base.Clone()));
+            GameCaféDatabaseDataSet cln = ((GameCaféDatabaseDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Game_Café_Demonstration_Program.Databases {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "HardwareDatabaseDataSet";
+            this.DataSetName = "GameCaféDatabaseDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/HardwareDatabaseDataSet.xsd";
+            this.Namespace = "http://tempuri.org/GameCaféDatabaseDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableHardware = new HardwareDataTable();
@@ -225,7 +225,7 @@ namespace Game_Café_Demonstration_Program.Databases {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            HardwareDatabaseDataSet ds = new HardwareDatabaseDataSet();
+            GameCaféDatabaseDataSet ds = new GameCaféDatabaseDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -279,11 +279,11 @@ namespace Game_Café_Demonstration_Program.Databases {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class HardwareDataTable : global::System.Data.TypedTableBase<HardwareRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnHardwareID;
             
-            private global::System.Data.DataColumn columnHardware;
+            private global::System.Data.DataColumn columnHardwareType;
             
-            private global::System.Data.DataColumn columnPeripherals_;
+            private global::System.Data.DataColumn columnPeripheral;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -320,25 +320,25 @@ namespace Game_Café_Demonstration_Program.Databases {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn HardwareIDColumn {
                 get {
-                    return this.columnId;
+                    return this.columnHardwareID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn HardwareColumn {
+            public global::System.Data.DataColumn HardwareTypeColumn {
                 get {
-                    return this.columnHardware;
+                    return this.columnHardwareType;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Peripherals_Column {
+            public global::System.Data.DataColumn PeripheralColumn {
                 get {
-                    return this.columnPeripherals_;
+                    return this.columnPeripheral;
                 }
             }
             
@@ -379,12 +379,12 @@ namespace Game_Café_Demonstration_Program.Databases {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public HardwareRow AddHardwareRow(int Id, string Hardware, string Peripherals_) {
+            public HardwareRow AddHardwareRow(string HardwareType, string Peripheral) {
                 HardwareRow rowHardwareRow = ((HardwareRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
-                        Hardware,
-                        Peripherals_};
+                        null,
+                        HardwareType,
+                        Peripheral};
                 rowHardwareRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowHardwareRow);
                 return rowHardwareRow;
@@ -392,9 +392,9 @@ namespace Game_Café_Demonstration_Program.Databases {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public HardwareRow FindById(int Id) {
+            public HardwareRow FindByHardwareID(int HardwareID) {
                 return ((HardwareRow)(this.Rows.Find(new object[] {
-                            Id})));
+                            HardwareID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -414,27 +414,31 @@ namespace Game_Café_Demonstration_Program.Databases {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnHardware = base.Columns["Hardware"];
-                this.columnPeripherals_ = base.Columns["Peripherals "];
+                this.columnHardwareID = base.Columns["HardwareID"];
+                this.columnHardwareType = base.Columns["HardwareType"];
+                this.columnPeripheral = base.Columns["Peripheral"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnHardware = new global::System.Data.DataColumn("Hardware", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHardware);
-                this.columnPeripherals_ = new global::System.Data.DataColumn("Peripherals ", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPeripherals_);
+                this.columnHardwareID = new global::System.Data.DataColumn("HardwareID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHardwareID);
+                this.columnHardwareType = new global::System.Data.DataColumn("HardwareType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHardwareType);
+                this.columnPeripheral = new global::System.Data.DataColumn("Peripheral", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPeripheral);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AllowDBNull = false;
-                this.columnId.Unique = true;
-                this.columnHardware.AllowDBNull = false;
-                this.columnHardware.MaxLength = 20;
-                this.columnPeripherals_.MaxLength = 20;
+                                this.columnHardwareID}, true));
+                this.columnHardwareID.AutoIncrement = true;
+                this.columnHardwareID.AutoIncrementSeed = -1;
+                this.columnHardwareID.AutoIncrementStep = -1;
+                this.columnHardwareID.AllowDBNull = false;
+                this.columnHardwareID.ReadOnly = true;
+                this.columnHardwareID.Unique = true;
+                this.columnHardwareType.AllowDBNull = false;
+                this.columnHardwareType.MaxLength = 50;
+                this.columnPeripheral.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -502,7 +506,7 @@ namespace Game_Café_Demonstration_Program.Databases {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HardwareDatabaseDataSet ds = new HardwareDatabaseDataSet();
+                GameCaféDatabaseDataSet ds = new GameCaféDatabaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -577,52 +581,52 @@ namespace Game_Café_Demonstration_Program.Databases {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Id {
+            public int HardwareID {
                 get {
-                    return ((int)(this[this.tableHardware.IdColumn]));
+                    return ((int)(this[this.tableHardware.HardwareIDColumn]));
                 }
                 set {
-                    this[this.tableHardware.IdColumn] = value;
+                    this[this.tableHardware.HardwareIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Hardware {
+            public string HardwareType {
                 get {
-                    return ((string)(this[this.tableHardware.HardwareColumn]));
+                    return ((string)(this[this.tableHardware.HardwareTypeColumn]));
                 }
                 set {
-                    this[this.tableHardware.HardwareColumn] = value;
+                    this[this.tableHardware.HardwareTypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Peripherals_ {
+            public string Peripheral {
                 get {
                     try {
-                        return ((string)(this[this.tableHardware.Peripherals_Column]));
+                        return ((string)(this[this.tableHardware.PeripheralColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Peripherals \' in table \'Hardware\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Peripheral\' in table \'Hardware\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableHardware.Peripherals_Column] = value;
+                    this[this.tableHardware.PeripheralColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPeripherals_Null() {
-                return this.IsNull(this.tableHardware.Peripherals_Column);
+            public bool IsPeripheralNull() {
+                return this.IsNull(this.tableHardware.PeripheralColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPeripherals_Null() {
-                this[this.tableHardware.Peripherals_Column] = global::System.Convert.DBNull;
+            public void SetPeripheralNull() {
+                this[this.tableHardware.PeripheralColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -661,7 +665,7 @@ namespace Game_Café_Demonstration_Program.Databases {
         }
     }
 }
-namespace Game_Café_Demonstration_Program.Databases.HardwareDatabaseDataSetTableAdapters {
+namespace Game_Café_Demonstration_Program.Databases.GameCaféDatabaseDataSetTableAdapters {
     
     
     /// <summary>
@@ -785,48 +789,47 @@ namespace Game_Café_Demonstration_Program.Databases.HardwareDatabaseDataSetTabl
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Hardware";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Hardware", "Hardware");
-            tableMapping.ColumnMappings.Add("Peripherals ", "Peripherals ");
+            tableMapping.ColumnMappings.Add("HardwareID", "HardwareID");
+            tableMapping.ColumnMappings.Add("HardwareType", "HardwareType");
+            tableMapping.ColumnMappings.Add("Peripheral", "Peripheral");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Hardware] WHERE (([Id] = @Original_Id) AND ([Hardware] = @Orig" +
-                "inal_Hardware) AND ((@IsNull_Peripherals_ = 1 AND [Peripherals ] IS NULL) OR ([P" +
-                "eripherals ] = @Original_Peripherals_)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Hardware] WHERE (([HardwareID] = @Original_HardwareID) AND ([H" +
+                "ardwareType] = @Original_HardwareType) AND ((@IsNull_Peripheral = 1 AND [Periphe" +
+                "ral] IS NULL) OR ([Peripheral] = @Original_Peripheral)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hardware", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hardware", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Peripherals_", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripherals ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Peripherals_", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripherals ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HardwareID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardwareID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HardwareType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardwareType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Peripheral", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripheral", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Peripheral", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripheral", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Hardware] ([Id], [Hardware], [Peripherals ]) VALUES (@Id, @Har" +
-                "dware, @Peripherals_);\r\nSELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE " +
-                "(Id = @Id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Hardware] ([HardwareType], [Peripheral]) VALUES (@HardwareType" +
+                ", @Peripheral);\r\nSELECT HardwareID, HardwareType, Peripheral FROM Hardware WHERE" +
+                " (HardwareID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hardware", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hardware", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peripherals_", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripherals ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HardwareType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardwareType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peripheral", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripheral", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Hardware] SET [Id] = @Id, [Hardware] = @Hardware, [Peripherals ] = @Peripherals_ WHERE (([Id] = @Original_Id) AND ([Hardware] = @Original_Hardware) AND ((@IsNull_Peripherals_ = 1 AND [Peripherals ] IS NULL) OR ([Peripherals ] = @Original_Peripherals_)));
-SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Hardware] SET [HardwareType] = @HardwareType, [Peripheral] = @Peripheral WHERE (([HardwareID] = @Original_HardwareID) AND ([HardwareType] = @Original_HardwareType) AND ((@IsNull_Peripheral = 1 AND [Peripheral] IS NULL) OR ([Peripheral] = @Original_Peripheral)));
+SELECT HardwareID, HardwareType, Peripheral FROM Hardware WHERE (HardwareID = @HardwareID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hardware", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hardware", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peripherals_", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripherals ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hardware", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hardware", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Peripherals_", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripherals ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Peripherals_", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripherals ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HardwareType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardwareType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peripheral", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripheral", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HardwareID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardwareID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HardwareType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardwareType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Peripheral", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripheral", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Peripheral", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peripheral", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HardwareID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "HardwareID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Game_Café_Demonstration_Program.Properties.Settings.Default.HardwareDatabaseConnectionString;
+            this._connection.ConnectionString = global::Game_Café_Demonstration_Program.Properties.Settings.Default.GameCaféDatabaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -835,7 +838,7 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Hardware, [Peripherals ] FROM dbo.Hardware";
+            this._commandCollection[0].CommandText = "SELECT HardwareID, HardwareType, Peripheral FROM dbo.Hardware";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -843,7 +846,7 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HardwareDatabaseDataSet.HardwareDataTable dataTable) {
+        public virtual int Fill(GameCaféDatabaseDataSet.HardwareDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -856,9 +859,9 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HardwareDatabaseDataSet.HardwareDataTable GetData() {
+        public virtual GameCaféDatabaseDataSet.HardwareDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HardwareDatabaseDataSet.HardwareDataTable dataTable = new HardwareDatabaseDataSet.HardwareDataTable();
+            GameCaféDatabaseDataSet.HardwareDataTable dataTable = new GameCaféDatabaseDataSet.HardwareDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -866,14 +869,14 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HardwareDatabaseDataSet.HardwareDataTable dataTable) {
+        public virtual int Update(GameCaféDatabaseDataSet.HardwareDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HardwareDatabaseDataSet dataSet) {
+        public virtual int Update(GameCaféDatabaseDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Hardware");
         }
         
@@ -896,21 +899,21 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Hardware, string Original_Peripherals_) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_Hardware == null)) {
-                throw new global::System.ArgumentNullException("Original_Hardware");
+        public virtual int Delete(int Original_HardwareID, string Original_HardwareType, string Original_Peripheral) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_HardwareID));
+            if ((Original_HardwareType == null)) {
+                throw new global::System.ArgumentNullException("Original_HardwareType");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Hardware));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_HardwareType));
             }
-            if ((Original_Peripherals_ == null)) {
+            if ((Original_Peripheral == null)) {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Peripherals_));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Peripheral));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -932,19 +935,18 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string Hardware, string Peripherals_) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
-            if ((Hardware == null)) {
-                throw new global::System.ArgumentNullException("Hardware");
+        public virtual int Insert(string HardwareType, string Peripheral) {
+            if ((HardwareType == null)) {
+                throw new global::System.ArgumentNullException("HardwareType");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Hardware));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(HardwareType));
             }
-            if ((Peripherals_ == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((Peripheral == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Peripherals_));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Peripheral));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -966,35 +968,35 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string Hardware, string Peripherals_, int Original_Id, string Original_Hardware, string Original_Peripherals_) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
-            if ((Hardware == null)) {
-                throw new global::System.ArgumentNullException("Hardware");
+        public virtual int Update(string HardwareType, string Peripheral, int Original_HardwareID, string Original_HardwareType, string Original_Peripheral, int HardwareID) {
+            if ((HardwareType == null)) {
+                throw new global::System.ArgumentNullException("HardwareType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Hardware));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(HardwareType));
             }
-            if ((Peripherals_ == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Peripherals_));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
-            if ((Original_Hardware == null)) {
-                throw new global::System.ArgumentNullException("Original_Hardware");
+            if ((Peripheral == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Hardware));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Peripheral));
             }
-            if ((Original_Peripherals_ == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_HardwareID));
+            if ((Original_HardwareType == null)) {
+                throw new global::System.ArgumentNullException("Original_HardwareType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Peripherals_));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_HardwareType));
             }
+            if ((Original_Peripheral == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Peripheral));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(HardwareID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1015,8 +1017,8 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Hardware, string Peripherals_, int Original_Id, string Original_Hardware, string Original_Peripherals_) {
-            return this.Update(Original_Id, Hardware, Peripherals_, Original_Id, Original_Hardware, Original_Peripherals_);
+        public virtual int Update(string HardwareType, string Peripheral, int Original_HardwareID, string Original_HardwareType, string Original_Peripheral) {
+            return this.Update(HardwareType, Peripheral, Original_HardwareID, Original_HardwareType, Original_Peripheral, Original_HardwareID);
         }
     }
     
@@ -1111,7 +1113,7 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(HardwareDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(GameCaféDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._hardwareTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Hardware.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1130,7 +1132,7 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(HardwareDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(GameCaféDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._hardwareTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Hardware.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1148,7 +1150,7 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(HardwareDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(GameCaféDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._hardwareTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Hardware.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1190,7 +1192,7 @@ SELECT Id, Hardware, [Peripherals ] FROM Hardware WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(HardwareDatabaseDataSet dataSet) {
+        public virtual int UpdateAll(GameCaféDatabaseDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
