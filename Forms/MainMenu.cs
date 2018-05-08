@@ -31,5 +31,21 @@ namespace Game_Café_Demonstration_Program
             hardwareList.ShowDialog();
             this.Close();
         }
+
+        private void GamesButton_Click(object sender, EventArgs e)
+        {
+            GamesList gamesList = new GamesList();
+            this.Hide();
+            gamesList.ShowDialog();
+            this.Close();
+        }
+
+        private void EventsButton_Click(object sender, EventArgs e)
+        {
+            EventList eventList = new EventList();
+            this.Hide();
+            eventList.ShowDialog();
+            this.Close();
+        }
     }
 }

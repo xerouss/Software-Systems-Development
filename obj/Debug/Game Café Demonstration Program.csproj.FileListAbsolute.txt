@@ -25,3 +25,6 @@ D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Proj
 D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.MainMenu.resources
 D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\bin\Debug\Databases\GameCaféDatabase.mdf
 D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\bin\Debug\Databases\GameCaféDatabase_log.ldf
+C:\Users\1harta74\Desktop\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.exe.config
+C:\Users\1harta74\Desktop\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.exe
+C:\Users\1harta74\Desktop\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.pdb

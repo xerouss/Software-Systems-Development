@@ -78,6 +78,7 @@
             this.GamesButton.TabIndex = 2;
             this.GamesButton.Text = "Games";
             this.GamesButton.UseVisualStyleBackColor = true;
+            this.GamesButton.Click += new System.EventHandler(this.GamesButton_Click);
             // 
             // EventsButton
             // 
@@ -88,11 +89,12 @@
             this.EventsButton.TabIndex = 3;
             this.EventsButton.Text = "Events";
             this.EventsButton.UseVisualStyleBackColor = true;
+            this.EventsButton.Click += new System.EventHandler(this.EventsButton_Click);
             // 
             // MainMenuTitle
             // 
-            this.MainMenuTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.MainMenuTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MainMenuTitle.AutoSize = true;
             this.MainMenuTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

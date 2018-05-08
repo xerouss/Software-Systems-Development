@@ -66,6 +66,18 @@
     <Compile Include="Forms\Add to list\HardwareRegistration.Designer.cs">
       <DependentUpon>HardwareRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Lists\EventList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lists\EventList.Designer.cs">
+      <DependentUpon>EventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lists\GamesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lists\GamesList.Designer.cs">
+      <DependentUpon>GamesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Lists\HardwareList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Add to list\HardwareRegistration.resx">
       <DependentUpon>HardwareRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lists\EventList.resx">
+      <DependentUpon>EventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lists\GamesList.resx">
+      <DependentUpon>GamesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Lists\HardwareList.resx">
       <DependentUpon>HardwareList.cs</DependentUpon>
