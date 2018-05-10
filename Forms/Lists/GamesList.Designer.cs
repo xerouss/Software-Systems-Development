@@ -49,6 +49,7 @@
             this.Controls.Add(this.Back);
             this.Name = "GamesList";
             this.Text = "GamesList";
+            this.Load += new System.EventHandler(this.GamesList_Load);
             this.ResumeLayout(false);
 
         }

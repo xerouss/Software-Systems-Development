@@ -13,44 +13,46 @@ namespace Game_Café_Demonstration_Program
 {
     public partial class HardwareList : View
     {
-        DataController dataController;
+        const int numOfDataFields = 2;
+
+        DataController m_dataController;
+
         public HardwareList(DataController controller)
         {
-
             InitializeComponent();
-            dataController = controller;
+            m_dataController = controller;
         }
-
-
 
         private void ReturnToMenuButton_Click(object sender, EventArgs e)
         {
-            // Create a hardware form to show while closing this form
-            //MainMenu mainMenu = new MainMenu();
+            // Go back to the main menu
             this.Hide();
-            dataController.GoToMainMenu();
-
+            m_dataController.GoToMainMenu();
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             // Create the hardware registration form to show while closing this form
-            HardwareRegistration hardwareRegistration = new HardwareRegistration(dataController);
+            HardwareRegistration hardwareRegistration = new HardwareRegistration(m_dataController);
             this.Hide();
             hardwareRegistration.Show();
         }
 
         private void HardwareList_Load(object sender, EventArgs e)
         {
-            RecieveData(dataController.GetData());
+            // Get the hardware data from the database
+            RecieveData(m_dataController.GetData());
 
+            // Get split the data string in order to get the value to display
             string[] dataSplit = data.Split('\n');
             string hardware = "";
             string peripherals = "";
 
             for (int i = 0; i < dataSplit.Length; i++)
             {
-                if (i % 2 == 0) hardware += dataSplit[i] + '\n';
+                // Since there are only two different sets of data needed
+                // Every odd index will be the hardware while the even index would be the peripherals
+                if (i % numOfDataFields == 0) hardware += dataSplit[i] + '\n';
                 else peripherals += dataSplit[i] + '\n';
             }
 
