@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Add to list\EventRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add to list\EventRegistration.Designer.cs">
+      <DependentUpon>EventRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Add to list\GameRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <Compile Include="Scripts\View.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\Add to list\EventRegistration.resx">
+      <DependentUpon>EventRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Add to list\GameRegistration.resx">
       <DependentUpon>GameRegistration.cs</DependentUpon>
     </EmbeddedResource>

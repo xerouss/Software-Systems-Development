@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class GameRegistration : Form
+    public partial class GameRegistration : View
     {
-
         DataController m_dataController;
+
         public GameRegistration(DataController dataController)
         {
             InitializeComponent();

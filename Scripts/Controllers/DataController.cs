@@ -10,7 +10,6 @@ namespace Game_Café_Demonstration_Program
     {
         View m_view;
         Model m_model;
-        
 
         public DataController(AppController prevController) :
             base(prevController)
