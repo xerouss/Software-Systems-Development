@@ -11,63 +11,56 @@ using System.Data.SqlClient;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class HardwareList : Form
+    public partial class HardwareList : View
     {
-        public HardwareList()
+        DataController dataController;
+        public HardwareList(DataController controller)
         {
+
             InitializeComponent();
+            dataController = controller;
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
         private void ReturnToMenuButton_Click(object sender, EventArgs e)
         {
             // Create a hardware form to show while closing this form
-            MainMenu mainMenu = new MainMenu();
+            //MainMenu mainMenu = new MainMenu();
             this.Hide();
-            mainMenu.ShowDialog();
-            this.Close();
+            dataController.GoToMainMenu();
+
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             // Create the hardware registration form to show while closing this form
-            HardwareRegistration mainMenu = new HardwareRegistration();
+            HardwareRegistration hardwareRegistration = new HardwareRegistration(dataController);
             this.Hide();
-            mainMenu.ShowDialog();
-            this.Close();
+            hardwareRegistration.Show();
         }
 
         private void HardwareList_Load(object sender, EventArgs e)
         {
-            // Connect to the database
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Databases\GameCaféDatabase.mdf;Integrated Security=True;");
-            // Create the command which will be used to interact with the database
-            SqlCommand cmd = new SqlCommand("sp_selectHardware", con);
+            RecieveData(dataController.GetData());
 
-            // Set the data which will be added to the database
-            cmd.CommandType = CommandType.StoredProcedure;
+            string[] dataSplit = data.Split('\n');
+            string hardware = "";
+            string peripherals = "";
 
-            // Open the connection to the database and execute the command
-            con.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-            string hardwareType = "";
-            string peripheral = "";
-
-            while (reader.Read())
+            for (int i = 0; i < dataSplit.Length; i++)
             {
-                hardwareType += reader["HardwareType"].ToString() + "\n";
-                peripheral += reader["Peripheral"].ToString() + "\n";
+                if (i % 2 == 0) hardware += dataSplit[i] + '\n';
+                else peripherals += dataSplit[i] + '\n';
             }
 
-            // Close the database since we have finished using it
-            con.Close();
+            HardwareNamesData.Text = hardware;
+            PeripheralData.Text = peripherals;
+        }
 
-            HardwareNamesData.Text = hardwareType;
-            PeripheralData.Text = peripheral;
+        private void HardwareList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -60,6 +60,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\EventModel.cs" />
+    <Compile Include="Models\GameModel.cs" />
+    <Compile Include="Models\HardwareModel.cs" />
+    <Compile Include="Scripts\Controllers\AppController.cs" />
     <Compile Include="Forms\Add to list\HardwareRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,8 +106,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GameCaféDatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Scripts\Controllers\DataController.cs" />
+    <Compile Include="Scripts\Controllers\MainMenuController.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Controllers\AccountController.cs" />
+    <Compile Include="Scripts\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="Forms\Add to list\HardwareRegistration.resx">
       <DependentUpon>HardwareRegistration.cs</DependentUpon>
     </EmbeddedResource>

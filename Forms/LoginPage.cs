@@ -10,30 +10,38 @@ using System.Windows.Forms;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class LoginPage : Form
+    public partial class LoginPage : View
     {
-        public LoginPage()
+        AccountController m_controller;
+
+        public LoginPage(AccountController appController)
         {
             InitializeComponent();
+            m_controller = appController;
         }
 
-
-        private void LoginButton_Click_1(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
-            MainMenu mainMenu = new MainMenu();
-            this.Hide();
-            mainMenu.ShowDialog();
-            this.Close();
+            // Check the login details match with an account
+            // If so go to main menu
+            m_controller.CheckLoginDetails(GetUserName(), GetPassword());
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public string GetUserName()
         {
-
+            // Implement this
+            return "";
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public string GetPassword()
         {
+            // Implement this
+            return "";
+        }
 
+        private void LoginPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -113,6 +113,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainMenu";
             this.Text = "Main Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

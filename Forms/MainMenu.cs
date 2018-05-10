@@ -10,42 +10,47 @@ using System.Windows.Forms;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class MainMenu : Form
+    public partial class MainMenu : View
     {
-        public MainMenu()
+        MainMenuController m_controller;
+
+        public MainMenu(MainMenuController mainController)
         {
             InitializeComponent();
+            m_controller = mainController;
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 
         private void HardwareButton_Click(object sender, EventArgs e)
         {
+            m_controller.GoToHardwareList();
+
             // Create a hardware form to show while closing this form
-            HardwareList hardwareList = new HardwareList();
-            this.Hide();
-            hardwareList.ShowDialog();
-            this.Close();
+            //HardwareList hardwareList = new HardwareList();
+            //this.Hide();
+            //hardwareList.ShowDialog();
         }
 
         private void GamesButton_Click(object sender, EventArgs e)
         {
+            m_controller.GoToGameList();
+
             GamesList gamesList = new GamesList();
             this.Hide();
             gamesList.ShowDialog();
-            this.Close();
         }
 
         private void EventsButton_Click(object sender, EventArgs e)
         {
+            m_controller.GoToEventList();
+
             EventList eventList = new EventList();
             this.Hide();
             eventList.ShowDialog();
-            this.Close();
+        }
+
+        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

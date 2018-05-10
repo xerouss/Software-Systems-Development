@@ -81,7 +81,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1224, 682);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // PeripheralData
             // 
@@ -237,6 +236,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "HardwareList";
             this.Text = "Hardware List";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HardwareList_FormClosing);
             this.Load += new System.EventHandler(this.HardwareList_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

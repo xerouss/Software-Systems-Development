@@ -44,7 +44,7 @@
             this.LoginButton.TabIndex = 0;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click_1);
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // UsernameTextBox
             // 
@@ -53,7 +53,6 @@
             this.UsernameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.UsernameTextBox.Size = new System.Drawing.Size(100, 20);
             this.UsernameTextBox.TabIndex = 1;
-            this.UsernameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // PasswortTextBox
             // 
@@ -71,7 +70,6 @@
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -105,6 +103,7 @@
             this.Controls.Add(this.LoginButton);
             this.Name = "LoginPage";
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginPage_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

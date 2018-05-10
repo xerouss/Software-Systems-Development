@@ -28,3 +28,27 @@ D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Proj
 C:\Users\1harta74\Desktop\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.exe.config
 C:\Users\1harta74\Desktop\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.exe
 C:\Users\1harta74\Desktop\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.pdb
+C:\Users\1wongs50\Downloads\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Databases\GameCaféDatabase.mdf
+C:\Users\1wongs50\Downloads\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Databases\GameCaféDatabase_log.ldf
+C:\Users\1wongs50\Downloads\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.HardwareRegistration.resources
+C:\Users\1wongs50\Downloads\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.EventList.resources
+C:\Users\1wongs50\Downloads\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.GamesList.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csprojResolveAssemblyReference.cache
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.HardwareRegistration.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.EventList.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.GamesList.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.HardwareList.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.LoginPage.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.MainMenu.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.Properties.Resources.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csproj.GenerateResource.Cache
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csproj.CoreCompileInputs.cache
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.exe
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.pdb
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Databases\GameCaféDatabase.mdf
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Databases\GameCaféDatabase_log.ldf
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.exe.config
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.exe
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.pdb
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.EventList.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.GamesList.resources

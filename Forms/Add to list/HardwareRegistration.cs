@@ -14,9 +14,12 @@ namespace Game_Café_Demonstration_Program
     public partial class HardwareRegistration : Form
     {
 
-        public HardwareRegistration()
+        DataController m_dataController;
+
+        public HardwareRegistration(DataController dataController)
         {
             InitializeComponent();
+            m_dataController = dataController;
         }
 
         private void HardwareRegistration_Load(object sender, EventArgs e)
@@ -46,36 +49,38 @@ namespace Game_Café_Demonstration_Program
 
             if (hardware != "")
             {
-                // Connect to the database
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Databases\GameCaféDatabase.mdf;Integrated Security=True;");
-                // Create the command which will be used to interact with the database
-                SqlCommand cmd = new SqlCommand("sp_insertIntoHardware", con);
+                m_dataController.AddData(hardware + "\n" + peripheral);
+                //// Connect to the database
+                //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Databases\GameCaféDatabase.mdf;Integrated Security=True;");
+                //// Create the command which will be used to interact with the database
+                //SqlCommand cmd = new SqlCommand("sp_insertIntoHardware", con);
 
-                // Set the data which will be added to the database
-                cmd.CommandType = CommandType.StoredProcedure;
-                //cmd.Parameters.AddWithValue("@HardwareID", SqlDbType.Int).Value = 0;
-                cmd.Parameters.AddWithValue("@HardwareType", SqlDbType.VarChar).Value = hardware;
-                cmd.Parameters.AddWithValue("@Peripheral", SqlDbType.VarChar).Value = peripheral;
+                //// Set the data which will be added to the database
+                //cmd.CommandType = CommandType.StoredProcedure;
 
-                // Open the connection to the database and execute the command
-                con.Open();
-                int i = cmd.ExecuteNonQuery();
+                //cmd.Parameters.AddWithValue("@HardwareType", SqlDbType.VarChar).Value = hardware;
+                //cmd.Parameters.AddWithValue("@Peripheral", SqlDbType.VarChar).Value = peripheral;
 
-                // Close the database since we have finished using it
-                con.Close();
+                //// Open the connection to the database and execute the command
+                //con.Open();
+                //int i = cmd.ExecuteNonQuery();
 
-                // Return the user back to the hardware list
-                ReturnBackToHardwareList();
+                //// Close the database since we have finished using it
+                //con.Close();
+
+                //// Return the user back to the hardware list
+                //ReturnBackToHardwareList();
+                this.Hide();
+                m_dataController.GoToMainMenu();
             }
         }
 
         void ReturnBackToHardwareList()
         {
             // Returns back to the hardware list
-            HardwareList mainMenu = new HardwareList();
-            this.Hide();
-            mainMenu.ShowDialog();
-            this.Close();
+            //HardwareList mainMenu = new HardwareList();
+            //this.Hide();
+            //mainMenu.ShowDialog();
         }
     }
 }
