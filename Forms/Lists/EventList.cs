@@ -33,15 +33,6 @@ namespace Game_Café_Demonstration_Program
             Application.Exit();
         }
 
-        private void RegisterButton_Click(object sender, EventArgs e)
-        {
-            EventRegistration eventRegistration = new EventRegistration(m_dataController);
-
-            this.Hide();
-
-            eventRegistration.Show();
-        }
-
         private void EventList_Load(object sender, EventArgs e)
         {
             RecieveData(m_dataController.GetData());
@@ -98,6 +89,24 @@ namespace Game_Café_Demonstration_Program
             TeamData.Text = teams;
             NumTeamMemberData.Text = teamMembers;
             GameData.Text = game;
+        }
+
+        private void Register_Click(object sender, EventArgs e)
+        {
+            EventRegistration eventRegistration = new EventRegistration(m_dataController);
+
+            this.Hide();
+
+            eventRegistration.Show();
+        }
+
+        private void RegisterTeamButton_Click(object sender, EventArgs e)
+        {
+           TeamBooking teamBooking= new TeamBooking(m_dataController);
+
+           this.Hide();
+
+           teamBooking.Show();
         }
     }
 }

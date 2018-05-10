@@ -72,6 +72,12 @@
     <Compile Include="Forms\Add to list\GameRegistration.designer.cs">
       <DependentUpon>GameRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Add to list\TeamBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add to list\TeamBooking.Designer.cs">
+      <DependentUpon>TeamBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Lists\AccountList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,7 @@
     <Compile Include="Scripts\Controllers\DataController.cs" />
     <Compile Include="Scripts\Controllers\MainMenuController.cs" />
     <Compile Include="Scripts\Models\Model.cs" />
+    <Compile Include="Scripts\Models\TeamModel.cs" />
     <Compile Include="Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\Controllers\AccountController.cs" />
@@ -147,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Add to list\HardwareRegistration.resx">
       <DependentUpon>HardwareRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add to list\TeamBooking.resx">
+      <DependentUpon>TeamBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Lists\AccountList.resx">
       <DependentUpon>AccountList.cs</DependentUpon>

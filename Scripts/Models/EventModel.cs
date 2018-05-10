@@ -42,23 +42,23 @@ namespace Game_Café_Demonstration_Program
             // Carry out the command
             m_dataReader = cmd.ExecuteReader();
 
-            string accountData = "";
+            string eventData = "";
 
             // Go through the database and get the data
             while (m_dataReader.Read())
             {
-                accountData += m_dataReader["Name"].ToString() + "\n";
-                accountData += m_dataReader["Date"].ToString() + "\n";
-                accountData += m_dataReader["Time"].ToString() + "\n";
-                accountData += m_dataReader["AvailableTickets"].ToString() + "\n";
-                accountData += m_dataReader["NumOfTeams"].ToString() + "\n";
-                accountData += m_dataReader["NumOfTeamMembers"].ToString() + "\n";
-                accountData += m_dataReader["Game"].ToString() + "\n";
+                eventData += m_dataReader["Name"].ToString() + "\n";
+                eventData += m_dataReader["Date"].ToString() + "\n";
+                eventData += m_dataReader["Time"].ToString() + "\n";
+                eventData += m_dataReader["AvailableTickets"].ToString() + "\n";
+                eventData += m_dataReader["NumOfTeams"].ToString() + "\n";
+                eventData += m_dataReader["NumOfTeamMembers"].ToString() + "\n";
+                eventData += m_dataReader["Game"].ToString() + "\n";
             }
 
             // Close the database since we have finished using it
             m_dataConnection.Close();
-            return accountData;
+            return eventData;
         }
     }
 }

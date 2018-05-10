@@ -62,6 +62,7 @@
             // HardwareDropDown
             // 
             this.HardwareDropDown.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.HardwareDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.HardwareDropDown.FormattingEnabled = true;
             this.HardwareDropDown.Items.AddRange(new object[] {
             "Microsoft Xbox One X",
@@ -94,6 +95,7 @@
             // PeripheralDropDown
             // 
             this.PeripheralDropDown.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PeripheralDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PeripheralDropDown.FormattingEnabled = true;
             this.PeripheralDropDown.Items.AddRange(new object[] {
             "Acer R240 24-inch Monitor",
@@ -132,7 +134,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "HardwareRegistration";
             this.Text = "HardwareRegistration";
-            this.Load += new System.EventHandler(this.HardwareRegistration_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

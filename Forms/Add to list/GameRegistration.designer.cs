@@ -76,6 +76,7 @@
             // AgeRatingDropdown
             // 
             this.AgeRatingDropdown.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AgeRatingDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AgeRatingDropdown.FormattingEnabled = true;
             this.AgeRatingDropdown.Items.AddRange(new object[] {
             "3",
@@ -129,6 +130,7 @@
             // GameHardwareDropdown
             // 
             this.GameHardwareDropdown.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GameHardwareDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GameHardwareDropdown.FormattingEnabled = true;
             this.GameHardwareDropdown.Location = new System.Drawing.Point(274, 525);
             this.GameHardwareDropdown.Name = "GameHardwareDropdown";

@@ -121,6 +121,7 @@
             // GameDropdown
             // 
             this.GameDropdown.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GameDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GameDropdown.FormattingEnabled = true;
             this.GameDropdown.Items.AddRange(new object[] {
             "Counter Strike: Global Offensive"});
@@ -159,6 +160,7 @@
             // TimeValue
             // 
             this.TimeValue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TimeValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TimeValue.FormattingEnabled = true;
             this.TimeValue.Items.AddRange(new object[] {
             "Morning (9am - 12pm)",
