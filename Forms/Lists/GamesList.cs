@@ -78,5 +78,16 @@ namespace Game_Café_Demonstration_Program
             // Set the label text to the correct string here
 
         }
+
+        private void RegisterGameButton_Click(object sender, EventArgs e)
+        {
+            GameRegistration gameRegistration = new GameRegistration(m_dataController);
+
+            this.Hide();
+
+            gameRegistration.Show();
+        }
+
+       
     }
 }

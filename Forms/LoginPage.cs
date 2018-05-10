@@ -43,10 +43,5 @@ namespace Game_Café_Demonstration_Program
         {
             Application.Exit();
         }
-
-        private void Register_Click(object sender, EventArgs e)
-        {
-            m_controller.GoToRegister();
-        }
     }
 }

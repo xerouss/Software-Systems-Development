@@ -19,12 +19,11 @@ namespace Game_Café_Demonstration_Program
             string[] data = newData.Split('\n');
 
             // Set the data to be added to the database
-            cmd.Parameters.AddWithValue("@FirstName", SqlDbType.VarChar).Value = data[0];
-            cmd.Parameters.AddWithValue("@Surname", SqlDbType.VarChar).Value = data[1];
-            cmd.Parameters.AddWithValue("@Username", SqlDbType.VarChar).Value = data[2];
-            cmd.Parameters.AddWithValue("@Password", SqlDbType.VarChar).Value = data[3];
-            cmd.Parameters.AddWithValue("@Age", SqlDbType.Int).Value = Int32.Parse (data[4]);
-            cmd.Parameters.AddWithValue("@MembershipType", SqlDbType.VarChar).Value = data[5];
+            cmd.Parameters.AddWithValue("@Name", SqlDbType.VarChar).Value = data[0];
+            cmd.Parameters.AddWithValue("@Username", SqlDbType.VarChar).Value = data[1];
+            cmd.Parameters.AddWithValue("@Password", SqlDbType.VarChar).Value = data[2];
+            cmd.Parameters.AddWithValue("@Age", SqlDbType.VarChar).Value = data[3];
+            cmd.Parameters.AddWithValue("@MembershipType", SqlDbType.VarChar).Value = data[4];
 
             // Carry out the SQL command
             int i = cmd.ExecuteNonQuery();

@@ -45,7 +45,7 @@ namespace Game_Café_Demonstration_Program
             m_model.AddData(data);
         }
 
-        public virtual void GoToMainMenu()
+        public void GoToMainMenu()
         {
             m_view.Hide();
             m_prevController.LoadView();

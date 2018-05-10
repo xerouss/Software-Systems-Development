@@ -52,22 +52,20 @@ D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Proj
 D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.pdb
 D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.EventList.resources
 D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.GamesList.resources
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\bin\Debug\Databases\GameCaféDatabase.mdf
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\bin\Debug\Databases\GameCaféDatabase_log.ldf
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.exe.config
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.exe
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.pdb
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csprojResolveAssemblyReference.cache
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.HardwareRegistration.resources
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.EventList.resources
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.GamesList.resources
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.HardwareList.resources
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.LoginPage.resources
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.MainMenu.resources
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.RegistrationPage.resources
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.Properties.Resources.resources
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csproj.GenerateResource.Cache
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csproj.CoreCompileInputs.cache
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.exe
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.pdb
-G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.Forms.Lists.AccountList.resources
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.exe.config
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.exe
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.pdb
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csprojResolveAssemblyReference.cache
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.GameRegistration.resources
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.HardwareRegistration.resources
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.EventList.resources
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.GamesList.resources
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.HardwareList.resources
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.LoginPage.resources
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.MainMenu.resources
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.Properties.Resources.resources
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.csproj.GenerateResource.Cache
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Databases\GameCaféDatabase.mdf
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Databases\GameCaféDatabase_log.ldf
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.exe
+C:\Users\Alister\Documents\SSD\Round Two\Software-Systems-Development-master\Software-Systems-Development-master\bin\Debug\Game Café Demonstration Program.pdb
