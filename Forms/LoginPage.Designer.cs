@@ -34,11 +34,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Register = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(104, 226);
+            this.LoginButton.Location = new System.Drawing.Point(102, 183);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(75, 23);
             this.LoginButton.TabIndex = 0;
@@ -90,11 +91,22 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Login";
             // 
+            // Register
+            // 
+            this.Register.Location = new System.Drawing.Point(102, 226);
+            this.Register.Name = "Register";
+            this.Register.Size = new System.Drawing.Size(75, 23);
+            this.Register.TabIndex = 6;
+            this.Register.Text = "Register";
+            this.Register.UseVisualStyleBackColor = true;
+            this.Register.Click += new System.EventHandler(this.Register_Click);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.Register);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -117,6 +129,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Register;
     }
 }
 

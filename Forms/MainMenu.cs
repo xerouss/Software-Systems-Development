@@ -34,18 +34,14 @@ namespace Game_Café_Demonstration_Program
         {
             m_controller.GoToGameList();
 
-            GamesList gamesList = new GamesList();
-            this.Hide();
-            gamesList.ShowDialog();
+            
         }
 
         private void EventsButton_Click(object sender, EventArgs e)
         {
             m_controller.GoToEventList();
 
-            EventList eventList = new EventList();
-            this.Hide();
-            eventList.ShowDialog();
+            
         }
 
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)

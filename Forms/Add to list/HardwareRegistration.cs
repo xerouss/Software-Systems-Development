@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class HardwareRegistration : Form
+    public partial class HardwareRegistration : View
     {
 
         DataController m_dataController;

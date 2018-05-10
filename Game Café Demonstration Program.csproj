@@ -66,6 +66,12 @@
     <Compile Include="Forms\Lists\AccountList.Designer.cs">
       <DependentUpon>AccountList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RegistrationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegistrationPage.Designer.cs">
+      <DependentUpon>RegistrationPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Scripts\Models\AccountModel.cs" />
     <Compile Include="Scripts\Models\EventModel.cs" />
     <Compile Include="Scripts\Models\GameModel.cs" />
@@ -124,6 +130,9 @@
     <EmbeddedResource Include="Forms\Add to list\HardwareRegistration.resx">
       <DependentUpon>HardwareRegistration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lists\AccountList.resx">
+      <DependentUpon>AccountList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Lists\EventList.resx">
       <DependentUpon>EventList.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegistrationPage.resx">
+      <DependentUpon>RegistrationPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
