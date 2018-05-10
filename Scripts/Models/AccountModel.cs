@@ -47,7 +47,8 @@ namespace Game_Café_Demonstration_Program
             // Go through the database and get the data
             while (m_dataReader.Read())
             {
-                accountData += m_dataReader["Name"].ToString() + "\n";
+                accountData += m_dataReader["FirstName"].ToString() + "\n";
+                accountData += m_dataReader["Surname"].ToString() + "\n";
                 accountData += m_dataReader["Username"].ToString() + "\n";
                 accountData += m_dataReader["Password"].ToString() + "\n";
                 accountData += m_dataReader["Age"].ToString() + "\n";

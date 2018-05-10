@@ -14,6 +14,8 @@ namespace Game_Café_Demonstration_Program
         HardwareModel m_hardwareModel;
         GamesList m_gameList;
         GameModel m_gameModel;
+        AccountModel m_accountModel;
+        AccountList m_accountList;
 
         public MainMenuController(AppController prevController) :
             base(prevController)
@@ -26,6 +28,8 @@ namespace Game_Café_Demonstration_Program
             m_hardwareModel = new HardwareModel();
             m_gameList = new GamesList(m_dataController);
             m_gameModel = new GameModel();
+            m_accountModel = new AccountModel();
+            m_accountList = new AccountList(m_dataController);
         }
 
         public void GoToHardwareList()
@@ -46,7 +50,7 @@ namespace Game_Café_Demonstration_Program
 
         public void GoToAccountList()
         {
-
+            GoToNewDataView(m_accountList, m_accountModel);
         }
 
         void GoToNewDataView(View view, Model model)

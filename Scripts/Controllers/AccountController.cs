@@ -51,7 +51,6 @@ namespace Game_Café_Demonstration_Program
         public void GoToRegister()
         {
             m_view.Hide();
-            m_nextController = this;
             m_registrationPage.LoadView();
         }
     }

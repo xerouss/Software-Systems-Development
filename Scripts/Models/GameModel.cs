@@ -21,10 +21,10 @@ namespace Game_Café_Demonstration_Program
             // Set the data to be added to the database
             cmd.Parameters.AddWithValue("@Name", SqlDbType.VarChar).Value = data[0];
             cmd.Parameters.AddWithValue("@Console", SqlDbType.VarChar).Value = data[1];
-            cmd.Parameters.AddWithValue("@AgeRating", SqlDbType.VarChar).Value = data[2];
-            cmd.Parameters.AddWithValue("@SinglePlayer", SqlDbType.VarChar).Value = data[3];
-            cmd.Parameters.AddWithValue("@ChartRating", SqlDbType.VarChar).Value = data[4];
-            cmd.Parameters.AddWithValue("@Available", SqlDbType.VarChar).Value = data[5];
+            cmd.Parameters.AddWithValue("@AgeRating", SqlDbType.Int).Value = Int32.Parse(data[2]);
+            cmd.Parameters.AddWithValue("@SinglePlayer", SqlDbType.Bit).Value = 0;//data[3];
+            cmd.Parameters.AddWithValue("@ChartRating", SqlDbType.Int).Value = 1;// data[4];
+            cmd.Parameters.AddWithValue("@Available", SqlDbType.Bit).Value = 0;//  data[5];
 
             // Carry out the SQL command
             int i = cmd.ExecuteNonQuery();

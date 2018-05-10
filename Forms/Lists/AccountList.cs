@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Game_Café_Demonstration_Program.Forms.Lists
+namespace Game_Café_Demonstration_Program
 {
     public partial class AccountList : View
     {
-        const int numOfDataFields = 5;
+        const int numOfDataFields = 6;
 
         DataController m_dataController;
 
@@ -42,16 +42,19 @@ namespace Game_Café_Demonstration_Program.Forms.Lists
                 switch (modNum)
                 {
                     case 0:
-                        name += dataSplit[i] + '\n';
+                        name += dataSplit[i] + ' ';
                         break;
                     case 1:
+                        name += dataSplit[i] + '\n';
+                        break;
+                    case 2:
                         username += dataSplit[i] + '\n';
                         break;
                     // Don't do anything with case 2 because we don't want to display the account passwords
-                    case 3:
+                    case 4:
                         age += dataSplit[i] + '\n';
                         break;
-                    case 4:
+                    case 5:
                         membershipType += dataSplit[i] + '\n';
                         break;
                     default:
@@ -59,12 +62,21 @@ namespace Game_Café_Demonstration_Program.Forms.Lists
                 }
             }
 
-            // Set the label text to the correct string here
+            GameNamesData.Text = name;
+            UsernameData.Text = username;
+            AgeData.Text = age;
+            MembershipData.Text = membershipType;
         }
 
         private void HardwareList_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ReturnToMenuButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            m_dataController.GoToMainMenu();
         }
     }
 }

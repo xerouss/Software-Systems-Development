@@ -22,13 +22,6 @@ namespace Game_Café_Demonstration_Program
             m_dataController = dataController;
         }
 
-        private void Back_Click(object sender, EventArgs e)
-        {
-            // Go back to the main menu
-            this.Hide();
-            m_dataController.GoToMainMenu();
-        }
-
         private void GamesList_Load(object sender, EventArgs e)
         {
             RecieveData(m_dataController.GetData());
@@ -75,16 +68,32 @@ namespace Game_Café_Demonstration_Program
                 }
             }
 
-            // Set the label text to the correct string here
+            GameNamesData.Text = name;
+            ConsoleData.Text = console;
+            AgeRatingData.Text = age;
+            SinglePlayerData.Text = singlePlayer;
+            ChartData.Text = chartRating;
         }
 
-        private void RegisterGame_Click(object sender, EventArgs e)
+        private void RegisterButton_Click(object sender, EventArgs e)
         {
             GameRegistration gameRegistration = new GameRegistration(m_dataController);
 
             this.Hide();
 
             gameRegistration.Show();
+        }
+
+        private void GameList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ReturnToMenuButton_Click(object sender, EventArgs e)
+        {
+            // Go back to the main menu
+            this.Hide();
+            m_dataController.GoToMainMenu();
         }
     }
 }

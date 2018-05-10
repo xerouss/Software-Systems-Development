@@ -32,19 +32,22 @@ namespace Game_Café_Demonstration_Program
             string gameSystem = "";
             string gameRating = "";
 
-            if (GameNameText != null) gameName = GameNameText.ToString();
+            if (GameNameText.Text != null) gameName = GameNameText.Text.ToString();
             if (AgeRatingDropdown.SelectedItem != null) gameRating = AgeRatingDropdown.SelectedItem.ToString();
             if (GameHardwareDropdown.SelectedItem != null) gameSystem = GameHardwareDropdown.SelectedItem.ToString();
 
-            if (gameName == "")
+            if (gameName != "")
             {
                 m_dataController.AddData(gameName + "\n" + gameSystem + "\n" + gameRating);
-
-                
             }
 
             this.Hide();
             m_dataController.GoToMainMenu();
+        }
+
+        private void GameRegistration_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

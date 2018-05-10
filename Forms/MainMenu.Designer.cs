@@ -33,6 +33,7 @@
             this.GamesButton = new System.Windows.Forms.Button();
             this.EventsButton = new System.Windows.Forms.Button();
             this.MainMenuTitle = new System.Windows.Forms.Label();
+            this.accountButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.tableLayoutPanel1.Controls.Add(this.GamesButton, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.EventsButton, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.MainMenuTitle, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.accountButton, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -105,6 +107,17 @@
             this.MainMenuTitle.Text = "Main Menu";
             this.MainMenuTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // accountButton
+            // 
+            this.accountButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.accountButton.Location = new System.Drawing.Point(104, 223);
+            this.accountButton.Name = "accountButton";
+            this.accountButton.Size = new System.Drawing.Size(75, 23);
+            this.accountButton.TabIndex = 5;
+            this.accountButton.Text = "Accounts";
+            this.accountButton.UseVisualStyleBackColor = true;
+            this.accountButton.Click += new System.EventHandler(this.AccountButton_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Button GamesButton;
         private System.Windows.Forms.Button EventsButton;
         private System.Windows.Forms.Label MainMenuTitle;
+        private System.Windows.Forms.Button accountButton;
     }
 }

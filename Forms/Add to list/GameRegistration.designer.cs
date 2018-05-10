@@ -78,11 +78,11 @@
             this.AgeRatingDropdown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AgeRatingDropdown.FormattingEnabled = true;
             this.AgeRatingDropdown.Items.AddRange(new object[] {
-            "PEGI 3",
-            "PEGI 7",
-            "PEGI 12",
-            "PEGI 16",
-            "PEGI 18"});
+            "3",
+            "7",
+            "12",
+            "16",
+            "18"});
             this.AgeRatingDropdown.Location = new System.Drawing.Point(314, 310);
             this.AgeRatingDropdown.Name = "AgeRatingDropdown";
             this.AgeRatingDropdown.Size = new System.Drawing.Size(112, 21);
