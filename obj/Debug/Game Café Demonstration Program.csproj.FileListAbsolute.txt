@@ -71,3 +71,6 @@ G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-System
 G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.exe
 G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game Café Demonstration Program.pdb
 G:\Users\Lonck\Downloads\Software-Systems-Development-master (2)\Software-Systems-Development-master\obj\Debug\Game_Café_Demonstration_Program.Forms.Lists.AccountList.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.Forms.Lists.AccountList.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.RegistrationPage.resources
+D:\Libraries\Documents\University\3rd Year\Software Systems Development\SSD Project\Game Café Demonstration Program\obj\Debug\Game_Café_Demonstration_Program.GameRegistration.resources

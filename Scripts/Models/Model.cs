@@ -11,8 +11,8 @@ namespace Game_Café_Demonstration_Program
     
     public class Model
     {
-        protected SqlDataReader reader;
-        protected SqlConnection con;
+        protected SqlDataReader m_dataReader;
+        protected SqlConnection m_dataConnection;
 
         public Model()
         {
@@ -34,14 +34,14 @@ namespace Game_Café_Demonstration_Program
         public SqlCommand MakeConnection(string command)
         {
             //has to make sure the connection is established every time the data needs to be set/got, to ensure up-to-date data.
-            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Databases\GameCaféDatabase.mdf;Integrated Security=True;");
-            SqlCommand cmd = new SqlCommand(command, con)
+            m_dataConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Databases\GameCaféDatabase.mdf;Integrated Security=True;");
+            SqlCommand cmd = new SqlCommand(command, m_dataConnection)
             {
                 CommandType = CommandType.StoredProcedure
             };
 
             // Open the connection to the database and execute the command
-            con.Open();
+            m_dataConnection.Open();
 
             return cmd;
         }

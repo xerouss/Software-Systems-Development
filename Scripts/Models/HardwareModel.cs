@@ -26,7 +26,7 @@ namespace Game_Café_Demonstration_Program
             int i = cmd.ExecuteNonQuery();
 
             // Close the database since we have finished using it
-            con.Close();
+            m_dataConnection.Close();
         }
 
 
@@ -36,19 +36,19 @@ namespace Game_Café_Demonstration_Program
             SqlCommand cmd = MakeConnection("sp_selectHardware");
 
             // Carry out the command
-            reader = cmd.ExecuteReader();
+            m_dataReader = cmd.ExecuteReader();
 
             string hardwareData = "";
 
             // Go through the database and get the data
-            while (reader.Read())
+            while (m_dataReader.Read())
             {
-                hardwareData += reader["HardwareType"].ToString() + "\n";
-                hardwareData += reader["Peripheral"].ToString() + "\n";
+                hardwareData += m_dataReader["HardwareType"].ToString() + "\n";
+                hardwareData += m_dataReader["Peripheral"].ToString() + "\n";
             }
 
             // Close the database since we have finished using it
-            con.Close();
+            m_dataConnection.Close();
             return hardwareData;
         }
 

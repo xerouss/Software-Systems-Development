@@ -22,13 +22,13 @@ namespace Game_Café_Demonstration_Program.Forms.Lists
             m_dataController = controller;
         }
 
-        private void HardwareList_Load(object sender, EventArgs e)
+        private void AccountList_Load(object sender, EventArgs e)
         {
             // Get the hardware data from the database
             RecieveData(m_dataController.GetData());
 
             // Get split the data string in order to get the value to display
-            string[] dataSplit = data.Split('\n');
+            string[] dataSplit = m_data.Split('\n');
             string name = "";
             string username = "";
             string age = "";

@@ -30,7 +30,7 @@ namespace Game_Café_Demonstration_Program
             int i = cmd.ExecuteNonQuery();
 
             // Close the database since we have finished using it
-            con.Close();
+            m_dataConnection.Close();
         }
 
 
@@ -40,23 +40,23 @@ namespace Game_Café_Demonstration_Program
             SqlCommand cmd = MakeConnection("sp_selectGames");
 
             // Carry out the command
-            reader = cmd.ExecuteReader();
+            m_dataReader = cmd.ExecuteReader();
 
             string gamesData = "";
 
             // Go through the database and get the data
-            while (reader.Read())
+            while (m_dataReader.Read())
             {
-                gamesData += reader["Name"].ToString() + "\n";
-                gamesData += reader["Console"].ToString() + "\n";
-                gamesData += reader["AgeRating"].ToString() + "\n";
-                gamesData += reader["SinglePlayer"].ToString() + "\n";
-                gamesData += reader["ChartRating"].ToString() + "\n";
-                gamesData += reader["Available"].ToString() + "\n";
+                gamesData += m_dataReader["Name"].ToString() + "\n";
+                gamesData += m_dataReader["Console"].ToString() + "\n";
+                gamesData += m_dataReader["AgeRating"].ToString() + "\n";
+                gamesData += m_dataReader["SinglePlayer"].ToString() + "\n";
+                gamesData += m_dataReader["ChartRating"].ToString() + "\n";
+                gamesData += m_dataReader["Available"].ToString() + "\n";
             }
 
             // Close the database since we have finished using it
-            con.Close();
+            m_dataConnection.Close();
             return gamesData;
         }
     }

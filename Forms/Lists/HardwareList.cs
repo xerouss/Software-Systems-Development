@@ -44,7 +44,7 @@ namespace Game_Café_Demonstration_Program
             RecieveData(m_dataController.GetData());
 
             // Get split the data string in order to get the value to display
-            string[] dataSplit = data.Split('\n');
+            string[] dataSplit = m_data.Split('\n');
             string hardware = "";
             string peripherals = "";
 

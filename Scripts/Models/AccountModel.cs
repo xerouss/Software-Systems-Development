@@ -30,7 +30,7 @@ namespace Game_Café_Demonstration_Program
             int i = cmd.ExecuteNonQuery();
 
             // Close the database since we have finished using it
-            con.Close();
+            m_dataConnection.Close();
         }
 
 
@@ -40,22 +40,22 @@ namespace Game_Café_Demonstration_Program
             SqlCommand cmd = MakeConnection("sp_selectAccounts");
 
             // Carry out the command
-            reader = cmd.ExecuteReader();
+            m_dataReader = cmd.ExecuteReader();
 
             string accountData = "";
 
             // Go through the database and get the data
-            while (reader.Read())
+            while (m_dataReader.Read())
             {
-                accountData += reader["Name"].ToString() + "\n";
-                accountData += reader["Username"].ToString() + "\n";
-                accountData += reader["Password"].ToString() + "\n";
-                accountData += reader["Age"].ToString() + "\n";
-                accountData += reader["MembershipType"].ToString() + "\n";
+                accountData += m_dataReader["Name"].ToString() + "\n";
+                accountData += m_dataReader["Username"].ToString() + "\n";
+                accountData += m_dataReader["Password"].ToString() + "\n";
+                accountData += m_dataReader["Age"].ToString() + "\n";
+                accountData += m_dataReader["MembershipType"].ToString() + "\n";
             }
 
             // Close the database since we have finished using it
-            con.Close();
+            m_dataConnection.Close();
             return accountData;
         }
     }

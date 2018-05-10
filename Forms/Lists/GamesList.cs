@@ -34,7 +34,7 @@ namespace Game_Café_Demonstration_Program
             RecieveData(m_dataController.GetData());
 
             // Get split the data string in order to get the value to display
-            string[] dataSplit = data.Split('\n');
+            string[] dataSplit = m_data.Split('\n');
             string name = "";
             string console = "";
             string age = "";
@@ -76,7 +76,15 @@ namespace Game_Café_Demonstration_Program
             }
 
             // Set the label text to the correct string here
+        }
 
+        private void RegisterGame_Click(object sender, EventArgs e)
+        {
+            GameRegistration gameRegistration = new GameRegistration(m_dataController);
+
+            this.Hide();
+
+            gameRegistration.Show();
         }
     }
 }

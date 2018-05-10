@@ -237,7 +237,7 @@
             this.Name = "HardwareList";
             this.Text = "Hardware List";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HardwareList_FormClosing);
-            this.Load += new System.EventHandler(this.HardwareList_Load);
+            this.VisibleChanged += new System.EventHandler(this.HardwareList_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

@@ -31,12 +31,12 @@ namespace Game_Café_Demonstration_Program
         public void GoToHardwareList()
         {
             // Set the hardware list view/model and go to it
-            GoToNewView(m_hardwareListView, m_hardwareModel);
+            GoToNewDataView(m_hardwareListView, m_hardwareModel);
         }
 
         public void GoToGameList()
         {
-            GoToNewView(m_gameList, m_gameModel);
+            GoToNewDataView(m_gameList, m_gameModel);
         }
 
         public void GoToEventList()
@@ -49,7 +49,7 @@ namespace Game_Café_Demonstration_Program
 
         }
 
-        void GoToNewView(View view, Model model)
+        void GoToNewDataView(View view, Model model)
         {
             m_dataController.SetView(view);
             m_dataController.SetModel(model);

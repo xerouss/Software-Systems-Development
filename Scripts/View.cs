@@ -11,7 +11,7 @@ namespace Game_Café_Demonstration_Program
     {
         AppController controller;
 
-        protected string data;
+        protected string m_data;
         public void SetController(AppController setcontroller)
         {
             this.controller = setcontroller;
@@ -24,7 +24,7 @@ namespace Game_Café_Demonstration_Program
 
         public void RecieveData(string dataRecieved)
         {
-            data = dataRecieved;
+            m_data = dataRecieved;
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Back = new System.Windows.Forms.Button();
+            this.RegisterGame = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Back
@@ -41,11 +42,22 @@
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // RegisterGame
+            // 
+            this.RegisterGame.Location = new System.Drawing.Point(12, 54);
+            this.RegisterGame.Name = "RegisterGame";
+            this.RegisterGame.Size = new System.Drawing.Size(75, 23);
+            this.RegisterGame.TabIndex = 1;
+            this.RegisterGame.Text = "Register";
+            this.RegisterGame.UseVisualStyleBackColor = true;
+            this.RegisterGame.Click += new System.EventHandler(this.RegisterGame_Click);
+            // 
             // GamesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1103, 607);
+            this.Controls.Add(this.RegisterGame);
             this.Controls.Add(this.Back);
             this.Name = "GamesList";
             this.Text = "GamesList";
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Button RegisterGame;
     }
 }
