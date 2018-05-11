@@ -64,9 +64,11 @@ namespace Game_Café_Demonstration_Program
             // For each name add a new option and save the Id of the option
             for (int i = 0; i < eventNamesSplit.Length; i++)
             {
+                if (eventNamesSplit[i] == "") continue;
+
                 m_eventIds[i] = i;
                 EventDropDown.Items.Add(eventNamesSplit[i]);
-                m_eventNumOfTeams[i] = Int32.Parse(numOfTeamsSplit[i]);
+                if (numOfTeamsSplit[i] != "") m_eventNumOfTeams[i] = Int32.Parse(numOfTeamsSplit[i]);
             }
         }
 
@@ -86,7 +88,7 @@ namespace Game_Café_Demonstration_Program
             if (EventDropDown.SelectedItem != null) eventID = m_eventIds[EventDropDown.SelectedIndex].ToString() + makeBase1;
 
             // Check if they have values, if so add them to the database
-            if(name != "" && eventID != "")
+            if (name != "" && eventID != "")
             {
                 if (m_teamsSignedUpForEvent < m_eventNumOfTeams[EventDropDown.SelectedIndex])
                 {
