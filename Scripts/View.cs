@@ -9,22 +9,34 @@ namespace Game_Café_Demonstration_Program
 {
     public class View : Form
     {
-        AppController controller;
-
         protected string m_data;
-        public void SetController(AppController setcontroller)
+
+        public View(): base()
         {
-            this.controller = setcontroller;
+            // Need this constructor for the design view to be displayed
         }
+
+        public View(DataController dataController): base()
+        {
+            // Need this constructor for the design view to be displayed
+        }
+
 
         public void LoadView()
         {
+            // Display this form
             this.Show();
         }
 
         public void RecieveData(string dataRecieved)
         {
             m_data = dataRecieved;
+        }
+
+        public void OnFormClose()
+        {
+            // Close the application when the form is closed by pressing the cross button
+            Application.Exit();
         }
     }
 }

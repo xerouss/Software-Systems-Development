@@ -12,8 +12,6 @@ namespace Game_Café_Demonstration_Program
         LoginPage m_view;
         RegistrationPage m_registrationPage;
         AccountModel m_accountModel;
-        
-
 
         public AccountController(AppController prevController):
             base(prevController)

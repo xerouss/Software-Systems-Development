@@ -10,20 +10,17 @@ using System.Windows.Forms;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class GameRegistration : View
+    public partial class GameRegistration : DataView
     {
-        DataController m_dataController;
-
-        public GameRegistration(DataController dataController)
+        public GameRegistration(DataController dataController):
+            base(dataController)
         {
             InitializeComponent();
-            m_dataController = dataController;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            m_dataController.GoToMainMenu();
+            ReturnToMainMenu();
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -32,22 +29,23 @@ namespace Game_Café_Demonstration_Program
             string gameSystem = "";
             string gameRating = "";
 
+           // If the field can be blank check that there is a value in it before retrieving it
             if (GameNameText.Text != null) gameName = GameNameText.Text.ToString();
             if (AgeRatingDropdown.SelectedItem != null) gameRating = AgeRatingDropdown.SelectedItem.ToString();
             if (GameHardwareDropdown.SelectedItem != null) gameSystem = GameHardwareDropdown.SelectedItem.ToString();
 
+            // If the values are not blank add the data to the database
             if (gameName != "")
             {
                 m_dataController.AddData(gameName + "\n" + gameSystem + "\n" + gameRating);
             }
 
-            this.Hide();
-            m_dataController.GoToMainMenu();
+            ReturnToMainMenu();
         }
 
         private void GameRegistration_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            OnFormClose();
         }
     }
 }

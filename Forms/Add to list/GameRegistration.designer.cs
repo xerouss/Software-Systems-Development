@@ -132,6 +132,9 @@
             this.GameHardwareDropdown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GameHardwareDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GameHardwareDropdown.FormattingEnabled = true;
+            this.GameHardwareDropdown.Items.AddRange(new object[] {
+            "Microsoft Xbox One X",
+            "Sony Playstation PS4 Pro"});
             this.GameHardwareDropdown.Location = new System.Drawing.Point(274, 525);
             this.GameHardwareDropdown.Name = "GameHardwareDropdown";
             this.GameHardwareDropdown.Size = new System.Drawing.Size(192, 21);

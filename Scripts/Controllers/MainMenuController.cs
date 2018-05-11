@@ -59,6 +59,8 @@ namespace Game_Café_Demonstration_Program
 
         void GoToNewDataView(View view, Model model)
         {
+            // Set the view and model to the controller
+            // Hide the main menu and go to the view
             m_dataController.SetView(view);
             m_dataController.SetModel(model);
             m_view.Hide();

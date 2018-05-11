@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class TeamBooking : View
+    public partial class TeamBooking : DataView
     {
         const int numOfDataFieldsEvents = 7;
         const int numOfDataFieldsTeam = 2;
@@ -27,6 +27,7 @@ namespace Game_Café_Demonstration_Program
 
         public TeamBooking(DataController dataController)
         {
+            m_dataController = dataController;
             InitializeComponent();
             m_eventController = dataController;
             m_teamController = new DataController(null);
@@ -40,8 +41,7 @@ namespace Game_Café_Demonstration_Program
             EventDropDown.Items.Clear();
 
             // Get the event data to get all the names of the current events
-            RecieveData(m_eventController.GetData());
-            string[] dataSplit = m_data.Split('\n');
+            string[] dataSplit = LoadData(m_eventController);
             string eventNames = "";
             string numOfTeams = "";
 
@@ -72,8 +72,7 @@ namespace Game_Café_Demonstration_Program
 
         private void CancelRegistrationButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            m_eventController.GoToMainMenu();
+            ReturnToMainMenu();
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -104,12 +103,10 @@ namespace Game_Café_Demonstration_Program
         {
             m_teamsSignedUpForEvent = 0;
 
-            // Get the list of teams
-            RecieveData(m_teamController.GetData());
             ListOfTeams.Text = "Current Teams: \n";
 
-            // Split up the data
-            string[] dataSplit = m_data.Split('\n');
+            // Get the data and split up the data
+            string[] dataSplit = LoadData(m_teamController);
 
             List<string> teamNames = new List<string>();
             List<string> id = new List<string>();
@@ -133,6 +130,11 @@ namespace Game_Café_Demonstration_Program
                     m_teamsSignedUpForEvent++;
                 }
             }
+        }
+
+        private void TeamBooking_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            OnFormClose();
         }
     }
 }

@@ -29,19 +29,17 @@ namespace Game_Café_Demonstration_Program
 
         public string GetUserName()
         {
-            // Implement this
             return "";
         }
 
         public string GetPassword()
         {
-            // Implement this
             return "";
         }
 
         private void LoginPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            OnFormClose();
         }
 
         private void Register_Click(object sender, EventArgs e)

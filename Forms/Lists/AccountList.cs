@@ -10,31 +10,27 @@ using System.Windows.Forms;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class AccountList : View
+    public partial class AccountList : DataView
     {
         const int numOfDataFields = 6;
 
-        DataController m_dataController;
-
-        public AccountList(DataController controller)
+        public AccountList(DataController controller) :
+            base(controller)
         {
             InitializeComponent();
-            m_dataController = controller;
         }
 
         private void AccountList_Load(object sender, EventArgs e)
         {
-            // Get the hardware data from the database
-            RecieveData(m_dataController.GetData());
-
-            // Get split the data string in order to get the value to display
-            string[] dataSplit = m_data.Split('\n');
+            // Get the data
+            string[] dataSplit = LoadData(m_dataController);
             string name = "";
             string username = "";
             string age = "";
             string membershipType = "";
             int modNum;
 
+            // Based on what the mod number is decides what the data it represents
             for (int i = 0; i < dataSplit.Length; i++)
             {
                 modNum = i % numOfDataFields;
@@ -62,6 +58,7 @@ namespace Game_Café_Demonstration_Program
                 }
             }
 
+            // Display the data
             GameNamesData.Text = name;
             UsernameData.Text = username;
             AgeData.Text = age;
@@ -70,13 +67,12 @@ namespace Game_Café_Demonstration_Program
 
         private void HardwareList_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            OnFormClose();
         }
 
         private void ReturnToMenuButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            m_dataController.GoToMainMenu();
+            ReturnToMainMenu();
         }
     }
 }

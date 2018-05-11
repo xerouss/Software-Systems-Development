@@ -228,6 +228,7 @@
             this.Controls.Add(this.SubmitButton);
             this.Name = "EventRegistration";
             this.Text = "EventRegistration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EventRegistration_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Teams)).EndInit();

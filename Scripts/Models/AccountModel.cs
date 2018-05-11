@@ -13,51 +13,40 @@ namespace Game_Café_Demonstration_Program
         public override void AddData(string newData)
         {
             // Connect with the database
-            SqlCommand cmd = MakeConnection("sp_insertIntoAccount");
+            MakeConnection("sp_insertIntoAccount");
 
-            // Split up the string so the data can be set to be added
-            string[] data = newData.Split('\n');
+            base.AddData(newData);
+        }
 
+        public override void SetCommandParameters(string[] data)
+        {
             // Set the data to be added to the database
-            cmd.Parameters.AddWithValue("@FirstName", SqlDbType.VarChar).Value = data[0];
-            cmd.Parameters.AddWithValue("@Surname", SqlDbType.VarChar).Value = data[1];
-            cmd.Parameters.AddWithValue("@Username", SqlDbType.VarChar).Value = data[2];
-            cmd.Parameters.AddWithValue("@Password", SqlDbType.VarChar).Value = data[3];
-            cmd.Parameters.AddWithValue("@Age", SqlDbType.Int).Value = Int32.Parse (data[4]);
-            cmd.Parameters.AddWithValue("@MembershipType", SqlDbType.VarChar).Value = data[5];
-
-            // Carry out the SQL command
-            int i = cmd.ExecuteNonQuery();
-
-            // Close the database since we have finished using it
-            m_dataConnection.Close();
+            m_sqlCommand.Parameters.AddWithValue("@FirstName", SqlDbType.VarChar).Value = data[0];
+            m_sqlCommand.Parameters.AddWithValue("@Surname", SqlDbType.VarChar).Value = data[1];
+            m_sqlCommand.Parameters.AddWithValue("@Username", SqlDbType.VarChar).Value = data[2];
+            m_sqlCommand.Parameters.AddWithValue("@Password", SqlDbType.VarChar).Value = data[3];
+            m_sqlCommand.Parameters.AddWithValue("@Age", SqlDbType.Int).Value = Int32.Parse(data[4]);
+            m_sqlCommand.Parameters.AddWithValue("@MembershipType", SqlDbType.VarChar).Value = data[5];
         }
 
 
         public override string GetData()
         {
             // Connect with the database
-            SqlCommand cmd = MakeConnection("sp_selectAccounts");
+            MakeConnection("sp_selectAccounts");
 
-            // Carry out the command
-            m_dataReader = cmd.ExecuteReader();
+            return base.GetData();
+        }
 
-            string accountData = "";
-
-            // Go through the database and get the data
-            while (m_dataReader.Read())
-            {
-                accountData += m_dataReader["FirstName"].ToString() + "\n";
-                accountData += m_dataReader["Surname"].ToString() + "\n";
-                accountData += m_dataReader["Username"].ToString() + "\n";
-                accountData += m_dataReader["Password"].ToString() + "\n";
-                accountData += m_dataReader["Age"].ToString() + "\n";
-                accountData += m_dataReader["MembershipType"].ToString() + "\n";
-            }
-
-            // Close the database since we have finished using it
-            m_dataConnection.Close();
-            return accountData;
+        public override void GetDataFromReader(ref string data)
+        {
+            // Get the data from the database
+            data += m_dataReader["FirstName"].ToString() + "\n";
+            data += m_dataReader["Surname"].ToString() + "\n";
+            data += m_dataReader["Username"].ToString() + "\n";
+            data += m_dataReader["Password"].ToString() + "\n";
+            data += m_dataReader["Age"].ToString() + "\n";
+            data += m_dataReader["MembershipType"].ToString() + "\n";
         }
     }
 }

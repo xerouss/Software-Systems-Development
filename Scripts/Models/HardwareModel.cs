@@ -13,44 +13,32 @@ namespace Game_Café_Demonstration_Program
         public override void AddData(string newData)
         {
             // Connect with the database
-            SqlCommand cmd = MakeConnection("sp_insertIntoHardware");
+            MakeConnection("sp_insertIntoHardware");
 
-            // Split up the string so the data can be set to be added
-            string[] data = newData.Split('\n');
+            base.AddData(newData);
+        }
 
+        public override void SetCommandParameters(string[] data)
+        {
             // Set the data to be added to the database
-            cmd.Parameters.AddWithValue("@HardwareType", SqlDbType.VarChar).Value = data[0];
-            cmd.Parameters.AddWithValue("@Peripheral", SqlDbType.VarChar).Value = data[1];
-
-            // Carry out the SQL command
-            int i = cmd.ExecuteNonQuery();
-
-            // Close the database since we have finished using it
-            m_dataConnection.Close();
+            m_sqlCommand.Parameters.AddWithValue("@HardwareType", SqlDbType.VarChar).Value = data[0];
+            m_sqlCommand.Parameters.AddWithValue("@Peripheral", SqlDbType.VarChar).Value = data[1];
         }
 
 
         public override string GetData()
         {
             // Connect with the database
-            SqlCommand cmd = MakeConnection("sp_selectHardware");
+            MakeConnection("sp_selectHardware");
 
-            // Carry out the command
-            m_dataReader = cmd.ExecuteReader();
-
-            string hardwareData = "";
-
-            // Go through the database and get the data
-            while (m_dataReader.Read())
-            {
-                hardwareData += m_dataReader["HardwareType"].ToString() + "\n";
-                hardwareData += m_dataReader["Peripheral"].ToString() + "\n";
-            }
-
-            // Close the database since we have finished using it
-            m_dataConnection.Close();
-            return hardwareData;
+            return base.GetData();
         }
 
+        public override void GetDataFromReader(ref string data)
+        {
+            // Get the data from the database
+            data += m_dataReader["HardwareType"].ToString() + "\n";
+            data += m_dataReader["Peripheral"].ToString() + "\n";
+        }
     }
 }

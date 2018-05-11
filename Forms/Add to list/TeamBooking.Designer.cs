@@ -144,6 +144,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TeamBooking";
             this.Text = "TeamBooking";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TeamBooking_FormClosing);
+            this.VisibleChanged += new System.EventHandler(this.EventDropDown_VisibleChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

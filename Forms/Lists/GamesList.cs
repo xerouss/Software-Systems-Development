@@ -10,24 +10,20 @@ using System.Windows.Forms;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class GamesList : View
+    public partial class GamesList : DataView
     {
         const int numOfDataFields = 6;
 
-        DataController m_dataController;
-
-        public GamesList(DataController dataController)
+        public GamesList(DataController dataController):
+                  base(dataController)
         {
             InitializeComponent();
-            m_dataController = dataController;
         }
 
         private void GamesList_Load(object sender, EventArgs e)
         {
-            RecieveData(m_dataController.GetData());
-
-            // Get split the data string in order to get the value to display
-            string[] dataSplit = m_data.Split('\n');
+            // Get the data
+            string[] dataSplit = LoadData(m_dataController);
             string name = "";
             string console = "";
             string age = "";
@@ -68,6 +64,7 @@ namespace Game_Café_Demonstration_Program
                 }
             }
 
+            // Display the information
             GameNamesData.Text = name;
             ConsoleData.Text = console;
             AgeRatingData.Text = age;
@@ -77,23 +74,20 @@ namespace Game_Café_Demonstration_Program
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
+            // Hide this form and show the game registration form
             GameRegistration gameRegistration = new GameRegistration(m_dataController);
-
             this.Hide();
-
             gameRegistration.Show();
         }
 
         private void GameList_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            OnFormClose();
         }
 
         private void ReturnToMenuButton_Click(object sender, EventArgs e)
         {
-            // Go back to the main menu
-            this.Hide();
-            m_dataController.GoToMainMenu();
+            ReturnToMainMenu();
         }
     }
 }

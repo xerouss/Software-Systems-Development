@@ -11,45 +11,42 @@ using System.Data.SqlClient;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class HardwareRegistration : View
+    public partial class HardwareRegistration : DataView
     {
 
-        DataController m_dataController;
-
-        public HardwareRegistration(DataController dataController)
+        public HardwareRegistration(DataController dataController):
+            base(dataController)
         {
             InitializeComponent();
-            m_dataController = dataController;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            m_dataController.GoToMainMenu();
+            ReturnToMainMenu();
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            // Resources used to implement
-            // https://stackoverflow.com/questions/10263094/executenonquery-connection-property-has-not-been-initialized
-            // http://www.c-sharpcorner.com/UploadFile/009464/insert-data-into-database-in-window-form-using-C-Sharp/
-            // https://stackoverflow.com/questions/42868370/stored-procedure-not-found
-            // NOTE THE VALUES ARE NOT KEPT WHEN CLOSING THE APPLICATION
-            // HOWEVER WILL WORK IF YOU RUN THE APPLICATION FROM BIN/DEBUG FOLDER
-
             // Get the data to save into the database
             string peripheral = "";
             string hardware = "";
+
+            // Make sure the fields are not before getting the data to prevent errors
             if(HardwareDropDown.SelectedItem != null) hardware = HardwareDropDown.SelectedItem.ToString();
             if(PeripheralDropDown.SelectedItem != null) peripheral = PeripheralDropDown.SelectedItem.ToString();
 
+            // Add the data if there is a hardware inputted
             if (hardware != "")
             {
                 m_dataController.AddData(hardware + "\n" + peripheral);
-
-                this.Hide();
-                m_dataController.GoToMainMenu();
             }
+
+            ReturnToMainMenu();
+        }
+
+        private void HardwareRegistration_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            OnFormClose();
         }
     }
 }

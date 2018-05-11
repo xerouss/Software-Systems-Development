@@ -25,9 +25,7 @@ namespace Game_Café_Demonstration_Program
             m_controller = accountController;
             InitializeComponent();
         }
-
-
-
+        
         private void RegistrationPage_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -36,7 +34,6 @@ namespace Game_Café_Demonstration_Program
         private void NameText_TextChanged(object sender, EventArgs e)
         {
             m_username = NameText.Text;
-            
         }
 
         private void PasswordBox_TextChanged(object sender, EventArgs e)
@@ -47,9 +44,12 @@ namespace Game_Café_Demonstration_Program
 
         private void Register_Click(object sender, EventArgs e)
         {
+            // Add data to the database if they are not null
             if (m_username != null && m_password != null && m_DoB != null && m_name != null && m_surname != null)
             {
                 m_controller.AddData(m_name + "\n" + m_surname + "\n" + m_username + "\n" + m_password + "\n" + m_DoB + "\n" + m_membershipType);
+
+                // Reset the fields
                 Age.Value = 0;
                 Membership.ResetText();
                 FirstName.ResetText();
@@ -83,6 +83,7 @@ namespace Game_Café_Demonstration_Program
 
         private void Return_Click(object sender, EventArgs e)
         {
+            // Reset the fields
             Age.Value = 0;
             Membership.ResetText();
             FirstName.ResetText();
@@ -92,7 +93,5 @@ namespace Game_Café_Demonstration_Program
             m_controller.LoadView();
 
         }
-
-
     }
 }

@@ -10,35 +10,30 @@ using System.Windows.Forms;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class EventList : View
+    public partial class EventList : DataView
     {
         const int numOfDataFields = 7;
-        DataController m_dataController;
 
-        public EventList(DataController dataController)
+        public EventList(DataController dataController):
+            base (dataController)
         {
             InitializeComponent();
-            m_dataController = dataController;
         }
 
         private void ReturnToMenuButton_Click(object sender, EventArgs e)
         {
-            // Go back to the main menu
-            this.Hide();
-            m_dataController.GoToMainMenu();
+            ReturnToMainMenu();
         }
 
         private void EventList_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            OnFormClose();
         }
 
         private void EventList_Load(object sender, EventArgs e)
         {
-            RecieveData(m_dataController.GetData());
-
-            // Get split the data string in order to get the value to display
-            string[] dataSplit = m_data.Split('\n');
+            // Get the data
+            string[] dataSplit = LoadData(m_dataController);
             string name = "";
             string date = "";
             string time = "";
@@ -83,6 +78,7 @@ namespace Game_Café_Demonstration_Program
                 }
             }
 
+            // Display the data
             NamesData.Text = name;
             DateData.Text = date;
             TimeData.Text = time;
@@ -93,19 +89,17 @@ namespace Game_Café_Demonstration_Program
 
         private void Register_Click(object sender, EventArgs e)
         {
+            // Hide this form and show the event registration form
             EventRegistration eventRegistration = new EventRegistration(m_dataController);
-
             this.Hide();
-
             eventRegistration.Show();
         }
 
         private void RegisterTeamButton_Click(object sender, EventArgs e)
         {
+           // Hide this form and show the team booking form
            TeamBooking teamBooking= new TeamBooking(m_dataController);
-
            this.Hide();
-
            teamBooking.Show();
         }
     }

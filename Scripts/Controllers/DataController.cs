@@ -15,8 +15,6 @@ namespace Game_Café_Demonstration_Program
             base(prevController)
         {
             // Call AppController Constructor
-
-            
         }
 
         public void SetView(View view)

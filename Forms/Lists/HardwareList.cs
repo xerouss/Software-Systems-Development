@@ -11,28 +11,24 @@ using System.Data.SqlClient;
 
 namespace Game_Café_Demonstration_Program
 {
-    public partial class HardwareList : View
+    public partial class HardwareList : DataView
     {
         const int numOfDataFields = 2;
 
-        DataController m_dataController;
-
-        public HardwareList(DataController controller)
+        public HardwareList(DataController controller) :
+                    base(controller)
         {
             InitializeComponent();
-            m_dataController = controller;
         }
 
         private void ReturnToMenuButton_Click(object sender, EventArgs e)
         {
-            // Go back to the main menu
-            this.Hide();
-            m_dataController.GoToMainMenu();
+            ReturnToMainMenu();
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            // Create the hardware registration form to show while closing this form
+            // Create the hardware registration form to show while hiding this form
             HardwareRegistration hardwareRegistration = new HardwareRegistration(m_dataController);
             this.Hide();
             hardwareRegistration.Show();
@@ -40,11 +36,8 @@ namespace Game_Café_Demonstration_Program
 
         private void HardwareList_Load(object sender, EventArgs e)
         {
-            // Get the hardware data from the database
-            RecieveData(m_dataController.GetData());
-
-            // Get split the data string in order to get the value to display
-            string[] dataSplit = m_data.Split('\n');
+            // Get the data
+            string[] dataSplit = LoadData(m_dataController);
             string hardware = "";
             string peripherals = "";
 
@@ -56,13 +49,14 @@ namespace Game_Café_Demonstration_Program
                 else peripherals += dataSplit[i] + '\n';
             }
 
+            // Display the data
             HardwareNamesData.Text = hardware;
             PeripheralData.Text = peripherals;
         }
 
         private void HardwareList_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            OnFormClose();
         }
     }
 }
