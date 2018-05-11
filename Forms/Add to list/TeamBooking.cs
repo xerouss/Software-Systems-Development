@@ -86,7 +86,7 @@ namespace Game_Café_Demonstration_Program
             if (EventDropDown.SelectedItem != null) eventID = m_eventIds[EventDropDown.SelectedIndex].ToString() + makeBase1;
 
             // Check if they have values, if so add them to the database
-            if(name != null || eventID != null)
+            if(name != "" && eventID != "")
             {
                 if (m_teamsSignedUpForEvent < m_eventNumOfTeams[EventDropDown.SelectedIndex])
                 {

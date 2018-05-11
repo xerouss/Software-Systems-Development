@@ -35,7 +35,7 @@ namespace Game_Café_Demonstration_Program
             if (GameHardwareDropdown.SelectedItem != null) gameSystem = GameHardwareDropdown.SelectedItem.ToString();
 
             // If the values are not blank add the data to the database
-            if (gameName != "")
+            if (gameName != "" && gameRating != "" && gameSystem != "")
             {
                 m_dataController.AddData(gameName + "\n" + gameSystem + "\n" + gameRating);
             }

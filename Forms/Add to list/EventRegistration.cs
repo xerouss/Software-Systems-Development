@@ -40,7 +40,7 @@ namespace Game_Café_Demonstration_Program
             if (TimeValue.SelectedItem != null) time = TimeValue.SelectedItem.ToString();
 
             // If the values are not blank add the data to the database
-            if(name != "" || game != "" || time != "")
+            if(name != "" && game != "" && time != "")
             {
                 m_dataController.AddData(name + "\n" + game + "\n" + date + "\n" + time + "\n" + teams + "\n" + members);
             }
